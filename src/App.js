@@ -1,10 +1,9 @@
-import GetData from './components/GetData'
-
+import PasswordManager from './components/PasswordManager'
 import './App.css'
 
 const App = () => (
   <div>
-    <GetData />
+    <PasswordManager />
   </div>
 )
 
