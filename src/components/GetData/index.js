@@ -2,11 +2,11 @@ import {Component} from 'react'
 
 import {v4 as uuidv4} from 'uuid'
 
-import outputFile from '../outputFile'
+import ReceiveData from '../ReceiveData'
 
 import './index.css'
 
-class dataGettingFile extends Component {
+class GetData extends Component {
   state = {
     mainList: [],
     webSite: '',
@@ -96,7 +96,7 @@ class dataGettingFile extends Component {
           alt="app logo"
         />
         <div className="firstCon">
-          <form className="formCon" onChange={this.onAdding}>
+          <form className="formCon" onSubmit={this.onAdding}>
             <h1 className="inpH">Add New Password</h1>
             <div className="inpCon">
               <img
@@ -107,8 +107,8 @@ class dataGettingFile extends Component {
               <input
                 type="text"
                 className="inpEl"
-                onChange={this.onTypingWeb}
                 value={webSite}
+                onChange={this.onTypingWeb}
                 placeholder="Enter Website"
               />
             </div>
@@ -121,8 +121,8 @@ class dataGettingFile extends Component {
               <input
                 type="text"
                 className="inpEl"
-                onChange={this.onTypingName}
                 value={userName}
+                onChange={this.onTypingName}
                 placeholder="Enter Username"
               />
             </div>
@@ -135,8 +135,8 @@ class dataGettingFile extends Component {
               <input
                 type="password"
                 className="inpEl"
-                onChange={this.onTypingPass}
                 value={passWord}
+                onChange={this.onTypingPass}
                 placeholder="Enter Password"
               />
             </div>
@@ -188,7 +188,7 @@ class dataGettingFile extends Component {
           ) : (
             <ul className="listCon">
               {finalList.map(eachItem => (
-                <outputFile
+                <ReceiveData
                   key={eachItem.id}
                   itemDetails={eachItem}
                   onDelete={this.onDelete}
@@ -203,4 +203,4 @@ class dataGettingFile extends Component {
   }
 }
 
-export default dataGettingFile
+export default GetData

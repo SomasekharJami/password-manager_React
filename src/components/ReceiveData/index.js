@@ -1,6 +1,6 @@
 import './index.css'
 
-const outputFile = props => {
+const ReceiveData = props => {
   const {itemDetails, onDelete, passCheck} = props
   const {id, webSite, userName, passWord} = itemDetails
   const passwordItem = passCheck ? (
@@ -39,4 +39,4 @@ const outputFile = props => {
   )
 }
 
-export default outputFile
+export default ReceiveData

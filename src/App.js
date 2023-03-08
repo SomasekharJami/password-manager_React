@@ -1,10 +1,10 @@
-import dataGettingFile from './components/dataGettingFile'
+import GetData from './components/GetData'
 
 import './App.css'
 
 const App = () => (
   <div>
-    <dataGettingFile />
+    <GetData />
   </div>
 )
 
